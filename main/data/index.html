@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ESP32 Camera Server</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ESP32 Camera Server</h1>
+
+        <div class="status-card">
+
+            <p>
+                <strong>Wi-Fi:</strong>
+                <span id="wifi-status">
+                    Connected
+                </span>
+            </p>
+
+            <p>
+                <strong>ESP32-S3:</strong>
+                <span>
+                    Online
+                </span>
+            </p>
+
+        </div>
+
+        <label for="filename-input">
+            File name
+        </label>
+
+        <input
+            id="filename-input"
+            type="text"
+            maxlength="49"
+            placeholder="optional_name"
+            autocomplete="off"
+        >
+
+        <small>
+            Use letters, numbers, _ or -. The .jpg extension is added automatically.
+        </small>
+
+        <button id="capture-button">
+            📷 Capture
+        </button>
+
+        <details class="capture-advanced">
+            <summary>Advanced</summary>
+
+            <label for="auto-capture-checkbox">
+                <input
+                    id="auto-capture-checkbox"
+                    type="checkbox"
+                >
+                Auto capture
+            </label>
+
+            <label for="capture-interval-input">
+                Time between captures (seconds)
+            </label>
+
+            <input
+                id="capture-interval-input"
+                type="number"
+                min="0.1"
+                step="0.1"
+                value="2"
+            >
+
+            <label for="capture-count-input">
+                Continuous capture count
+            </label>
+
+            <input
+                id="capture-count-input"
+                type="number"
+                min="1"
+                max="9999"
+                step="1"
+                value="5"
+            >
+        </details>
+
+        <p id="message">
+            Ready to capture.
+        </p>
+
+        <hr>
+
+        <h2>Gallery</h2>
+
+        <a
+            id="download-all-button"
+            href="/download-all"
+            class="download-all-button"
+            download="photos.zip"
+        >
+            ⬇ Download ALL
+        </a>
+
+        <details class="advanced-download">
+            <summary>Advanced</summary>
+
+            <label for="zip-name-input">
+                Download file name
+            </label>
+
+            <input
+                id="zip-name-input"
+                type="text"
+                maxlength="49"
+                value="photos.zip"
+                autocomplete="off"
+            >
+
+            <small>
+                Use letters, numbers, _ or -.
+            </small>
+
+            <label for="photo-display-limit-input">
+                Number of photos to display
+            </label>
+
+            <input
+                id="photo-display-limit-input"
+                type="number"
+                min="0"
+                max="65535"
+                step="1"
+                value="3"
+            >
+
+            <small>
+                Use 0 to display every captured photo.
+            </small>
+
+            <label for="photo-prefix-input">
+                Include photos starting with
+            </label>
+
+            <input
+                id="photo-prefix-input"
+                type="text"
+                maxlength="49"
+                placeholder="all photos"
+                autocomplete="off"
+            >
+
+            <small>
+                Leave empty to include every photo.
+            </small>
+        </details>
+
+        <div id="gallery">
+            Loading photos...
+        </div>
+
+        <div class="delete-photos-panel">
+            <label for="delete-prefix-input">
+                Delete photos starting with
+            </label>
+
+            <input
+                id="delete-prefix-input"
+                type="text"
+                maxlength="49"
+                placeholder="photo_name"
+                autocomplete="off"
+            >
+
+            <label for="delete-start-input">
+                Start number
+            </label>
+
+            <input
+                id="delete-start-input"
+                type="number"
+                min="0"
+                max="9999"
+                step="1"
+                value="0"
+            >
+
+            <label for="delete-end-input">
+                End number
+            </label>
+
+            <input
+                id="delete-end-input"
+                type="number"
+                min="0"
+                max="9999"
+                step="1"
+                value="0"
+            >
+
+            <button id="delete-photos-button" type="button">
+                Delete
+            </button>
+
+            <p id="delete-message"></p>
+        </div>
+
+    </div>
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>

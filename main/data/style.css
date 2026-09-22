@@ -1,0 +1,198 @@
+hr {
+    margin: 35px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.photo-card {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 8px;
+}
+
+.photo-card p {
+    margin: 10px 0 0;
+
+    font-size: 14px;
+
+    word-break: break-all;
+}
+
+.download-button {
+    display: block;
+
+    margin-top: 10px;
+
+    padding: 8px 12px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.download-button:hover {
+    opacity: 0.85;
+}
+
+.download-all-button {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 10px 16px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+.download-all-button:hover {
+    opacity: 0.85;
+}
+
+.advanced-download {
+    margin-bottom: 20px;
+}
+
+.advanced-download summary {
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.advanced-download label {
+    margin-top: 8px;
+}
+
+.advanced-download input[type="number"] {
+    width: 120px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+#filename-input {
+    width: min(100%, 360px);
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+small {
+    display: block;
+    margin: 6px 0 14px;
+    color: #666;
+}
+
+#capture-button {
+    padding: 12px 22px;
+    font-size: 17px;
+    min-width: 132px;
+    min-height: 46px;
+}
+
+.capture-advanced {
+    margin: 14px 0 20px;
+}
+
+.capture-advanced summary {
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.capture-advanced input[type="number"] {
+    width: 120px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.capture-advanced input[type="checkbox"] {
+    width: auto;
+}
+
+.delete-photos-panel {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.delete-photos-panel input[type="text"],
+.delete-photos-panel input[type="number"] {
+    width: 120px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#delete-photos-button {
+    margin-top: 18px;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: #a22;
+    color: white;
+    cursor: pointer;
+}
+
+#delete-message {
+    min-height: 1.2em;
+}
