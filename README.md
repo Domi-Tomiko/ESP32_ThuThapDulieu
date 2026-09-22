@@ -20,6 +20,5 @@ idf.py -p COMx flash monitor
 
 Thay `COMx` bằng cổng COM của board.
 
-`managed_components/` và `build/` không cần chia sẻ; ESP-IDF sẽ tạo hoặc tải lại chúng khi build. File `sdkconfig` được giữ lại để chia sẻ cấu hình hiện tại của dự án.
 
 Trước khi flash, mở `main/main.c` và thay `YOUR_WIFI_SSID` cùng `YOUR_WIFI_PASSWORD` bằng thông tin mạng Wi-Fi của bạn. Không commit mật khẩu thật lên repository công khai.
