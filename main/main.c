@@ -1,6 +1,6 @@
 // name - pass wifi
-#define WIFI_SSID_tmp     "YOUR_WIFI_SSID"
-#define WIFI_PASSWORD_tmp "YOUR_WIFI_PASSWORD"
+SSID"YOUR_WIFI_PASSWORD"
+PASSWORD"YOUR_WIFI_PASSWORD"
 
 // main
 #include <stdio.h>
@@ -83,8 +83,8 @@ extern const uint8_t app_js_end[]
     asm("_binary_app_js_end");
 
 static const char *TAG = "STORAGE";
-#define WIFI_SSID     WIFI_SSID_tmp
-#define WIFI_PASSWORD WIFI_PASSWORD_tmp
+SSID"YOUR_WIFI_PASSWORD"
+PASSWORD"YOUR_WIFI_PASSWORD"
 
 static EventGroupHandle_t s_wifi_event_group;
 
